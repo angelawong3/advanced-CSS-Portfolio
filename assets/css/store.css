@@ -1,0 +1,97 @@
+* {
+    /* Padding and border are included in the width and height */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: lavender;
+}
+
+a {
+    color: black;
+    text-decoration: none; /* Remove the underline of the links*/ 
+}
+
+p {
+    font-size: 12px;
+}
+
+.header {
+    padding: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    background-color: purple;
+    color: pink;
+}
+
+.header h1 {
+    display: inline-block;
+    font-size: 42px;
+}
+
+.nav-bar {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.nav-ul {
+    /* Remove list bullets */
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.header nav ul li {
+    display: inline-block; /* Only takes the requried width */
+    margin-left: 25px;
+}
+
+.hero {
+    height: 450px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-image: url("../images/comp-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    display: block; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about-me, .work, .contact-me, .resume {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    border-radius: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: lightsalmon;
+    color: lightcoral;
+}
+
+.about-me h2, .work h2, .contact-me h2, .resume h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.footer {
+    padding: 30px;
+    clear: both; /* no other element takes up space on the left and right side */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 596px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
