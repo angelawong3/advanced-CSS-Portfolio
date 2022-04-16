@@ -109,6 +109,12 @@ img:hover {
     color: var(--text-white);
 }
 
+.my-img {
+    max-height: 180px;
+    float: left;
+    margin-right: 20px;
+}
+
 .about-me-para {
     font-size: 26px;
 }
@@ -130,7 +136,7 @@ img:hover {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 2px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     object-fit: contain;
     font-family: var(--text-family-g); 
     background-color: var(--bg-purple); 
@@ -144,12 +150,6 @@ img:hover {
     font-family: var(--text-family-g); 
     background-color: var(--bg-purple); 
     color: var(--text-white);
-}
-
-.my-img {
-    max-height: 180px;
-    float: left;
-    margin-right: 20px;
 }
 
 .footer {
