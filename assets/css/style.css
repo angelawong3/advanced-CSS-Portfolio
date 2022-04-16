@@ -1,3 +1,10 @@
+:root {
+    --bg-purple: rgba(170, 148, 242, 0.55);
+    --bg-workcard: rgba(71, 23, 231, 0.35);
+    --text-white: white;
+    --text-family-g: Georgia, 'Times New Roman', Times, serif; 
+  }
+
 * {
     /* Padding and border are included in the width and height */
     box-sizing: border-box;
@@ -14,6 +21,11 @@ nav>ul>li>a {
     text-decoration: none; /* Remove the underline of the links*/ 
 }
 
+div>ul>li {
+    font-size: larger;
+    list-style-type: none;
+}
+
 a {
     color:aliceblue;
     text-decoration: none; /* Remove the underline of the links*/ 
@@ -22,8 +34,13 @@ a:hover {
     color:pink;
 }
 
+h2 {
+    color: var(--bg-purple);
+    font-family: var(--text-family-g);
+}
+
 p {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 img {
@@ -37,9 +54,9 @@ img:hover {
 
 .header {
     padding: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
-    background-color: rgba(8, 11, 68, 0.85);
-    color: pink;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    background-color: rgba(126, 12, 183, 0.75);
+    color: rgb(219, 188, 255);
 }
 
 .header h1 {
@@ -51,8 +68,9 @@ img:hover {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
     font-size: 20px;
+    font-weight: bold;
 }
 
 .header nav ul {
@@ -82,34 +100,53 @@ img:hover {
     margin-right: 20px;
 }
 
-.about-me, .work {
+.about-me {
     margin-bottom: 20px;
-    padding: 20px;
-    min-height: 300px;
-    border-radius: 12px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(170, 148, 242, 0.55);
-    color: white;
+    padding: 25px;
+    min-height:230px;
+    font-family: var(--text-family-g); 
+    background-color: var(--bg-purple); 
+    color: var(--text-white);
+}
+
+.about-me-para {
+    font-size: 26px;
+}
+
+.my-work-1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 2px;
+    object-fit: contain;
+    font-family: var(--text-family-g); 
+    background-color: var(--bg-purple); 
+    color: var(--text-white);
+}
+
+.my-work-23 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    object-fit: contain;
+    font-family: var(--text-family-g); 
+    background-color: var(--bg-purple); 
+    color: var(--text-white);
 }
 
 .contact-me {
     margin-bottom: 20px;
     padding: 20px;
-    max-height: 150px;
-    border-radius: 12px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(170, 148, 242, 0.55);
-    color: white;
+    max-height:150px;
+    font-family: var(--text-family-g); 
+    background-color: var(--bg-purple); 
+    color: var(--text-white);
 }
 
-
-.about-me h2, .work h2, .contact-me h2 {
-    margin-bottom: 20px;
-    font-size: 32px;
-    color: beige;
-}
-
-.float-left {
+.my-img {
     max-height: 180px;
     float: left;
     margin-right: 20px;
@@ -122,18 +159,44 @@ img:hover {
     text-align: center;
 }
 
-#work1, #work2, #work3 {
+#work1 {
     margin-bottom: 10px;
     padding: 10px;
-    max-height: 100px;
-    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
     border-style: dotted;
+    border-width: 2px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(71, 23, 231, 0.35);
-    color: white;
+    background-color: var(--bg-workcard);
+    color: var(--text-white);
 }
 
-/* @media screen and (max-width: 596px) { */
+#work2, #work3 {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 10px;
+    max-height:50%; 
+    max-width: 50%;
+    border-radius: 12px;
+    border-style: dotted;
+    border-width: 2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--bg-workcard); 
+    color: var(--text-white);
+}
+
+#work1-img, #work2-img, #work3-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+#work1-img:hover, #work2-img:hover, #work3-img:hover{
+    opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         text-align: center;
@@ -144,20 +207,41 @@ img:hover {
     }
 
     .header nav {
-        display:flex;
-        flex-direction: column;
-        padding-top: 5px;
-        margin-right: 5px;
         float: none;
-        align-items: center;
+        font-size: 18px;
+    }
+
+    .header nav ul {
+        justify-content: center;
+    }
+
+    .my-img {
+        float: none;
+        margin-left: 33.33%;
+        margin-right: 33.33%;
+    }
+
+    #work1-img, #work2-img, #work3-img {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header nav {
+        padding-top: 5px;
         font-size: 16px;
     }
 
     .header nav ul {
-        display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 0;
+    }
+
+    .about-me-para {
+        font-size: 18px;
     }
 }
 
