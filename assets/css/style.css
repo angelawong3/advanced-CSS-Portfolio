@@ -23,7 +23,7 @@ nav>ul>li>a {
 
 div>ul>li {
     font-size: larger;
-    list-style-type: none;
+    list-style-type: none; /* Remove the bullet */
 }
 
 a {
@@ -67,7 +67,7 @@ img:hover {
 .header nav {
     padding-top: 15px;
     margin-right: 20px;
-    float: right;
+    float: right; /* Nav bar on the right */
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     font-size: 20px;
     font-weight: bold;
