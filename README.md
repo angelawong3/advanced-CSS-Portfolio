@@ -9,15 +9,15 @@ The Webpage includes:
 
 ![the-whole-page](./assets/images/whole-page.GIF)
 
-## The Page fits different devices, i.e. desktops, tablets, and smartphones.
+## The Page fits various screens
 
 Desktop:
 ![for-desktop](./assets/images/comp.png)
 
-Tablet:
+Max width (768px):
 ![for-tablet](./assets/images/tablet.png)
 
-Smartphone:
+Max width (596px):
 ![for-phone](./assets/images/phone.png)
 
 ### Link: 
